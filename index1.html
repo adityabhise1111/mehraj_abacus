@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProSkill Abacus Classes - Unleash Your Child's Potential</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Based on the image's warm/childish theme
+                        'primary-bg': '#FFFBF5', // Soft, warm cream background
+                        'accent-orange': '#FF8A00', // Bright, friendly orange
+                        'accent-brown': '#7B4A2F',  // Deeper, earthy brown for text/elements
+                        'secondary-yellow': '#FFD166', // Lighter, warm yellow
+                        'text-dark': '#3C3C3C', // Very dark gray/off-black for body text
+                        'text-light': '#6E6E6E', // Lighter gray for secondary text
+                        'btn-primary': '#E67E22', // A more vibrant, inviting orange for buttons
+                        'btn-secondary': '#F39C12', // A slightly different orange/yellow for secondary buttons
+                        'hero-gradient-start': '#F8C471', // Lighter yellow for gradient
+                        'hero-gradient-end': '#FF8A00',   // Deeper orange for gradient
+                        'footer-bg': '#2C3E50', // Dark but warm navy/charcoal for footer (contrasting but still soft)
+                        'footer-text': '#BDC3C7', // Light gray for footer text
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom styles can go here if Tailwind doesn't cover everything,
+           or for very specific overrides.
+           For example, for smooth scroll:
+        */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Sticky header background on scroll - needs JS */
+        .header-scrolled {
+            background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            backdrop-filter: blur(10px); /* Frosted glass effect */
+        }
+    </style>
+</head>
+<body class="font-sans text-text-dark bg-primary-bg antialiased">
+
+<header id="header" class="fixed top-0 left-0 w-full bg-primary-bg bg-opacity-90 z-50 transition-all duration-300">
+    <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+        <a href="#" class="flex items-center space-x-2">
+            <img src="https://via.placeholder.com/40x40?text=Logo" alt="ProSkill Abacus Logo" class="h-10 w-10 rounded-full bg-secondary-yellow">
+            <span class="text-2xl font-extrabold text-accent-brown">ProSkill</span>
+        </a>
+
+        <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-text-light focus:outline-none focus:text-text-dark">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <ul id="main-nav" class="hidden md:flex space-x-8 items-center">
+            <li><a href="#hero" class="text-lg font-medium text-text-light hover:text-accent-orange transition duration-300">Home</a></li>
+            <li><a href="#about" class="text-lg font-medium text-text-light hover:text-accent-orange transition duration-300">About Us</a></li>
+            <li><a href="#courses" class="text-lg font-medium text-text-light hover:text-accent-orange transition duration-300">Courses</a></li>
+            <li><a href="#testimonials" class="text-lg font-medium text-text-light hover:text-accent-orange transition duration-300">Testimonials</a></li>
+            <li><a href="#faq" class="text-lg font-medium text-text-light hover:text-accent-orange transition duration-300">FAQ</a></li>
+            <li><a href="#contact" class="text-lg font-medium text-text-light hover:text-accent-orange transition duration-300">Contact</a></li>
+            <li>
+                <a href="#" class="px-6 py-3 bg-btn-primary text-white rounded-full font-semibold hover:bg-accent-orange transition duration-300 shadow-md">
+                    Enroll Now
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-primary-bg py-4 shadow-lg">
+        <ul class="flex flex-col items-center space-y-4">
+            <li><a href="#hero" class="text-lg font-medium text-text-light hover:text-accent-orange transition duration-300 block py-2">Home</a></li>
+            <li><a href="#about" class="text-lg font-medium text-text-light hover:text-accent-orange transition duration-300 block py-2">About Us</a></li>
+            <li><a href="#courses" class="text-lg font-medium text-text-light hover:text-accent-orange transition duration-300 block py-2">Courses</a></li>
+            <li><a href="#testimonials" class="text-lg font-medium text-text-light hover:text-accent-orange transition duration-300 block py-2">Testimonials</a></li>
+            <li><a href="#faq" class="text-lg font-medium text-text-light hover:text-accent-orange transition duration-300 block py-2">FAQ</a></li>
+            <li><a href="#contact" class="text-lg font-medium text-text-light hover:text-accent-orange transition duration-300 block py-2">Contact</a></li>
+            <li>
+                <a href="#" class="px-6 py-3 bg-btn-primary text-white rounded-full font-semibold hover:bg-accent-orange transition duration-300 shadow-md block text-center">
+                    Enroll Now
+                </a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<main>
+    <section id="hero" class="relative bg-gradient-to-br from-hero-gradient-start to-hero-gradient-end text-text-dark py-24 md:py-32 overflow-hidden min-h-screen flex items-center justify-center">
+        <div class="absolute top-0 left-0 w-full h-full">
+            <div class="absolute w-64 h-64 bg-white bg-opacity-10 rounded-full -top-16 -left-16 animate-pulse"></div>
+            <div class="absolute w-96 h-96 bg-white bg-opacity-5 rounded-full bottom-20 -right-20 animate-pulse-slow"></div>
+        </div>
+
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+                Unlock Your Child's Potential with <span class="text-accent-brown">Abacus</span>
+            </h1>
+            <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-90 text-white">
+                Boost concentration, memory, and math skills with our engaging and effective abacus classes. Give your child the edge they deserve!
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#" class="px-8 py-4 bg-white text-btn-primary rounded-full font-bold text-lg hover:bg-gray-100 transition duration-300 shadow-lg">
+                    Book a Free Demo
+                </a>
+                <a href="#courses" class="px-8 py-4 border-2 border-white text-white rounded-full font-bold text-lg hover:bg-white hover:text-btn-primary transition duration-300 shadow-lg">
+                    Explore Courses
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 md:py-24 bg-primary-bg">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center text-accent-brown mb-12">
+                Why ProSkill Abacus?
+            </h2>
+            <div class="flex flex-col md:flex-row items-center md:space-x-12">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://via.placeholder.com/600x400?text=Happy+Kids+Learning" alt="Children learning abacus" class="rounded-lg shadow-xl transform hover:scale-105 transition duration-300">
+                </div>
+                <div class="md:w-1/2">
+                    <p class="text-lg leading-relaxed text-text-light mb-6">
+                        At ProSkill Abacus, we believe in nurturing young minds to achieve their full potential. Our certified instructors provide a supportive and stimulating environment where children master arithmetic skills while developing crucial cognitive abilities.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex items-start space-x-4 bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                            <i class="fas fa-brain text-3xl text-accent-orange mt-1"></i>
+                            <div>
+                                <h3 class="text-xl font-bold text-accent-brown mb-2">Enhanced Concentration</h3>
+                                <p class="text-text-light">Improve focus and attention span through engaging abacus exercises.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                            <i class="fas fa-memory text-3xl text-secondary-yellow mt-1"></i>
+                            <div>
+                                <h3 class="text-xl font-bold text-accent-brown mb-2">Boosted Memory Power</h3>
+                                <p class="text-text-light">Strengthen visual and auditory memory for better recall.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                            <i class="fas fa-calculator text-3xl text-accent-orange mt-1"></i>
+                            <div>
+                                <h3 class="text-xl font-bold text-accent-brown mb-2">Superior Math Skills</h3>
+                                <p class="text-text-light">Develop mental math prowess and a strong foundation in arithmetic.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                            <i class="fas fa-lightbulb text-3xl text-secondary-yellow mt-1"></i>
+                            <div>
+                                <h3 class="text-xl font-bold text-accent-brown mb-2">Overall Brain Development</h3>
+                                <p class="text-text-light">Stimulate both left and right brain hemispheres for holistic growth.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="py-16 md:py-24 bg-secondary-yellow bg-opacity-30">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center text-accent-brown mb-12">
+                Our Abacus Programs
+            </h2>
+            <p class="text-lg text-center text-text-light mb-12 max-w-3xl mx-auto">
+                We offer a structured curriculum designed to cater to different age groups and skill levels, ensuring a progressive learning journey for every child.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 group">
+                    <div class="p-8 pb-0">
+                        <div class="flex items-center justify-center bg-secondary-yellow text-accent-brown rounded-full w-16 h-16 mx-auto mb-6">
+                            <i class="fas fa-child text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-accent-brown text-center mb-3">Beginner Level</h3>
+                        <p class="text-text-light text-center mb-6">
+                            Introduction to abacus, basic addition and subtraction.
+                        </p>
+                    </div>
+                    <div class="bg-accent-orange text-white p-6 text-center">
+                        <ul class="text-sm space-y-2 mb-4 text-left">
+                            <li><i class="fas fa-check-circle text-white mr-2"></i>Ages: 5-7 years</li>
+                            <li><i class="fas fa-check-circle text-white mr-2"></i>Fundamentals of Abacus</li>
+                            <li><i class="fas fa-check-circle text-white mr-2"></i>Single Digit Operations</li>
+                        </ul>
+                        <a href="#" class="inline-block px-6 py-3 bg-white text-accent-orange rounded-full font-semibold hover:bg-gray-100 transition duration-300 shadow-md">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 group">
+                    <div class="p-8 pb-0">
+                        <div class="flex items-center justify-center bg-accent-orange bg-opacity-30 text-accent-brown rounded-full w-16 h-16 mx-auto mb-6">
+                            <i class="fas fa-graduation-cap text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-accent-brown text-center mb-3">Intermediate Level</h3>
+                        <p class="text-text-light text-center mb-6">
+                            Advanced addition, subtraction, introduction to multiplication.
+                        </p>
+                    </div>
+                    <div class="bg-accent-brown text-white p-6 text-center">
+                        <ul class="text-sm space-y-2 mb-4 text-left">
+                            <li><i class="fas fa-check-circle text-white mr-2"></i>Ages: 8-10 years</li>
+                            <li><i class="fas fa-check-circle text-white mr-2"></i>Multi-digit Operations</li>
+                            <li><i class="fas fa-check-circle text-white mr-2"></i>Mental Math Techniques</li>
+                        </ul>
+                        <a href="#" class="inline-block px-6 py-3 bg-white text-accent-brown rounded-full font-semibold hover:bg-gray-100 transition duration-300 shadow-md">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 group">
+                    <div class="p-8 pb-0">
+                        <div class="flex items-center justify-center bg-secondary-yellow text-accent-brown rounded-full w-16 h-16 mx-auto mb-6">
+                            <i class="fas fa-star text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-accent-brown text-center mb-3">Advanced Level</h3>
+                        <p class="text-text-light text-center mb-6">
+                            Complex calculations, division, decimals, speed accuracy.
+                        </p>
+                    </div>
+                    <div class="bg-accent-orange text-white p-6 text-center">
+                        <ul class="text-sm space-y-2 mb-4 text-left">
+                            <li><i class="fas fa-check-circle text-white mr-2"></i>Ages: 11+ years</li>
+                            <li><i class="fas fa-check-circle text-white mr-2"></i>Speed Calculation</li>
+                            <li><i class="fas fa-check-circle text-white mr-2"></i>Problem Solving Skills</li>
+                        </ul>
+                        <a href="#" class="inline-block px-6 py-3 bg-white text-accent-orange rounded-full font-semibold hover:bg-gray-100 transition duration-300 shadow-md">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="py-16 md:py-24 bg-primary-bg">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center text-accent-brown mb-12">
+                Our Simple Learning Path
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div class="flex flex-col items-center p-6 rounded-lg shadow-sm bg-white hover:shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-secondary-yellow text-accent-brown rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+                        1
+                    </div>
+                    <h3 class="text-xl font-bold text-accent-brown mb-3">Foundation Building</h3>
+                    <p class="text-text-light">Introduction to abacus tools and basic finger movements.</p>
+                </div>
+                <div class="flex flex-col items-center p-6 rounded-lg shadow-sm bg-white hover:shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-accent-orange text-accent-brown rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+                        2
+                    </div>
+                    <h3 class="text-xl font-bold text-accent-brown mb-3">Skill Development</h3>
+                    <p class="text-text-light">Mastering addition, subtraction, multiplication, and division.</p>
+                </div>
+                <div class="flex flex-col items-center p-6 rounded-lg shadow-sm bg-white hover:shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-secondary-yellow text-accent-brown rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+                        3
+                    </div>
+                    <h3 class="text-xl font-bold text-accent-brown mb-3">Speed & Accuracy</h3>
+                    <p class="text-text-light">Developing mental calculation techniques for rapid problem-solving.</p>
+                </div>
+                <div class="flex flex-col items-center p-6 rounded-lg shadow-sm bg-white hover:shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-accent-orange text-accent-brown rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+                        4
+                    </div>
+                    <h3 class="text-xl font-bold text-accent-brown mb-3">Application & Mastery</h3>
+                    <p class="text-text-light">Applying skills to real-world problems and competitive scenarios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-16 md:py-24 bg-accent-brown text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full">
+            <div class="absolute w-64 h-64 bg-white bg-opacity-10 rounded-full -top-16 -left-16 transform rotate-45"></div>
+            <div class="absolute w-96 h-96 bg-white bg-opacity-5 rounded-full bottom-20 -right-20 transform -rotate-15"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12">
+                What Our Parents Say
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white text-text-dark p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/60x60?text=Parent1" alt="Parent Photo" class="w-16 h-16 rounded-full mr-4 object-cover">
+                        <div>
+                            <p class="font-bold text-lg">Mrs. Priya Sharma</p>
+                            <p class="text-sm text-text-light">Parent of Aarav (8)</p>
+                        </div>
+                    </div>
+                    <div class="flex text-accent-orange mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="italic text-text-dark leading-relaxed">
+                        "ProSkill Abacus has been a game-changer for my son! His mental math skills have dramatically improved, and he's so much more confident in school."
+                    </p>
+                </div>
+
+                <div class="bg-white text-text-dark p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/60x60?text=Parent2" alt="Parent Photo" class="w-16 h-16 rounded-full mr-4 object-cover">
+                        <div>
+                            <p class="font-bold text-lg">Mr. Rahul Singh</p>
+                            <p class="text-sm text-text-light">Parent of Diya (7)</p>
+                        </div>
+                    </div>
+                    <div class="flex text-accent-orange mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic text-text-dark leading-relaxed">
+                        "The instructors are amazing – patient and highly skilled. My daughter loves her classes and her concentration has improved significantly."
+                    </p>
+                </div>
+
+                <div class="bg-white text-text-dark p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/60x60?text=Parent3" alt="Parent Photo" class="w-16 h-16 rounded-full mr-4 object-cover">
+                        <div>
+                            <p class="font-bold text-lg">Dr. Smita Rao</p>
+                            <p class="text-sm text-text-light">Parent of Rohan (9)</p>
+                        </div>
+                    </div>
+                    <div class="flex text-accent-orange mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="italic text-text-dark leading-relaxed">
+                        "Excellent program! Rohan not only excels in math now but also shows great enthusiasm for learning. Highly recommend ProSkill Abacus."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-16 md:py-24 bg-secondary-yellow bg-opacity-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center text-accent-brown mb-12">
+                Frequently Asked Questions
+            </h2>
+
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="w-full text-left p-6 font-semibold text-lg text-accent-brown flex justify-between items-center focus:outline-none" onclick="toggleAccordion(this)">
+                        What is Abacus education?
+                        <i class="fas fa-chevron-down text-text-light transition-transform duration-300"></i>
+                    </button>
+                    <div class="p-6 pt-0 text-text-light hidden">
+                        <p>Abacus education is a mental arithmetic system that teaches children to perform calculations (addition, subtraction, multiplication, division, etc.) using a physical abacus initially, and then mentally by visualizing the abacus.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="w-full text-left p-6 font-semibold text-lg text-accent-brown flex justify-between items-center focus:outline-none" onclick="toggleAccordion(this)">
+                        What are the benefits for my child?
+                        <i class="fas fa-chevron-down text-text-light transition-transform duration-300"></i>
+                    </button>
+                    <div class="p-6 pt-0 text-text-light hidden">
+                        <p>Benefits include improved concentration, enhanced memory, stronger mental calculation abilities, better problem-solving skills, and overall brain development, leading to academic excellence.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="w-full text-left p-6 font-semibold text-lg text-accent-brown flex justify-between items-center focus:outline-none" onclick="toggleAccordion(this)">
+                        What is the ideal age to start Abacus classes?
+                        <i class="fas fa-chevron-down text-text-light transition-transform duration-300"></i>
+                    </button>
+                    <div class="p-6 pt-0 text-text-light hidden">
+                        <p>The ideal age to start Abacus classes is typically between 5 to 14 years, as children's brains are highly receptive to new learning during this period.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="w-full text-left p-6 font-semibold text-lg text-accent-brown flex justify-between items-center focus:outline-none" onclick="toggleAccordion(this)">
+                        Do you offer online classes?
+                        <i class="fas fa-chevron-down text-text-light transition-transform duration-300"></i>
+                    </button>
+                    <div class="p-6 pt-0 text-text-light hidden">
+                        <p>Yes, we offer both in-person and highly interactive online abacus classes with live instructors and dedicated support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-20 bg-gradient-to-r from-btn-primary to-accent-orange text-white text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-6">Ready to Give Your Child the Abacus Advantage?</h2>
+            <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-90">
+                Join our growing family of successful students. Enroll today and watch your child excel!
+            </p>
+            <a href="#contact" class="px-8 py-4 bg-white text-btn-primary rounded-full font-bold text-lg hover:bg-gray-100 transition duration-300 shadow-lg">
+                Get Started Now
+            </a>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-24 bg-primary-bg">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center text-accent-brown mb-12">
+                Get In Touch
+            </h2>
+
+            <div class="flex flex-col md:flex-row gap-12 max-w-5xl mx-auto">
+                <div class="md:w-1/2 bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold text-accent-brown mb-6">Send Us a Message</h3>
+                    <form action="#" method="POST" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-text-dark text-sm font-bold mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-3 px-4 text-text-dark leading-tight focus:outline-none focus:ring-2 focus:ring-accent-orange transition duration-200" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-text-dark text-sm font-bold mb-2">Your Email</label>
+                            <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-3 px-4 text-text-dark leading-tight focus:outline-none focus:ring-2 focus:ring-accent-orange transition duration-200" placeholder="john.doe@example.com">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-text-dark text-sm font-bold mb-2">Phone Number (Optional)</label>
+                            <input type="tel" id="phone" name="phone" class="shadow appearance-none border rounded w-full py-3 px-4 text-text-dark leading-tight focus:outline-none focus:ring-2 focus:ring-accent-orange transition duration-200" placeholder="+91 9876543210">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-text-dark text-sm font-bold mb-2">Your Message</label>
+                            <textarea id="message" name="message" rows="5" class="shadow appearance-none border rounded w-full py-3 px-4 text-text-dark leading-tight focus:outline-none focus:ring-2 focus:ring-accent-orange transition duration-200" placeholder="Tell us about your child and what you're looking for..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-btn-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-accent-orange transition duration-300 shadow-md">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <div class="md:w-1/2 space-y-8">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold text-accent-brown mb-6">Our Location & Details</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-map-marker-alt text-xl text-accent-orange mt-1"></i>
+                                <div>
+                                    <p class="font-semibold text-text-dark">Address:</p>
+                                    <p class="text-text-light">123, Abacus Learning Hub, Near City Park, New Delhi, India</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-phone-alt text-xl text-accent-orange"></i>
+                                <div>
+                                    <p class="font-semibold text-text-dark">Phone:</p>
+                                    <p class="text-text-light">+91 123 456 7890</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-envelope text-xl text-accent-orange"></i>
+                                <div>
+                                    <p class="font-semibold text-text-dark">Email:</p>
+                                    <p class="text-text-light">info@proskillabacus.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="font-semibold text-lg text-accent-brown mb-3">Follow Us:</h4>
+                            <div class="flex space-x-4 text-2xl">
+                                <a href="#" class="text-accent-orange hover:text-accent-brown transition duration-300"><i class="fab fa-facebook"></i></a>
+                                <a href="#" class="text-accent-orange hover:text-accent-brown transition duration-300"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="text-accent-orange hover:text-accent-brown transition duration-300"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="text-accent-orange hover:text-accent-brown transition duration-300"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg shadow-lg overflow-hidden">
+                        <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.5855734261763!2d77.21666491490234!3d28.61391648242491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd1b8c0e2511%3A0x8f7d9c6e5a4e3e3b!2sConnaught%20Place%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1678901234567!5m2!1sen!2sin"
+                                width="100%"
+                                height="300"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                class="rounded-lg"
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="bg-footer-bg text-footer-text py-12">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+            <a href="#" class="flex items-center space-x-2 mb-4">
+                <img src="https://via.placeholder.com/30x30?text=Logo" alt="ProSkill Abacus Logo" class="h-8 w-8 rounded-full bg-secondary-yellow">
+                <span class="text-xl font-extrabold text-white">ProSkill</span>
+            </a>
+            <p class="text-footer-text text-sm leading-relaxed">
+                Nurturing young minds for a brighter future through engaging Abacus education.
+            </p>
+            <div class="flex space-x-4 mt-4 text-xl">
+                <a href="#" class="text-footer-text hover:text-accent-orange transition duration-300"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-footer-text hover:text-accent-orange transition duration-300"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-footer-text hover:text-accent-orange transition duration-300"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-footer-text hover:text-accent-orange transition duration-300"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div>
+            <h4 class="text-lg font-semibold mb-4 text-white">Quick Links</h4>
+            <ul class="space-y-2 text-footer-text text-sm">
+                <li><a href="#about" class="hover:text-accent-orange transition duration-300">About Us</a></li>
+                <li><a href="#courses" class="hover:text-accent-orange transition duration-300">Our Courses</a></li>
+                <li><a href="#how-it-works" class="hover:text-accent-orange transition duration-300">How It Works</a></li>
+                <li><a href="#testimonials" class="hover:text-accent-orange transition duration-300">Testimonials</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4 class="text-lg font-semibold mb-4 text-white">Support</h4>
+            <ul class="space-y-2 text-footer-text text-sm">
+                <li><a href="#faq" class="hover:text-accent-orange transition duration-300">FAQ</a></li>
+                <li><a href="#" class="hover:text-accent-orange transition duration-300">Privacy Policy</a></li>
+                <li><a href="#" class="hover:text-accent-orange transition duration-300">Terms of Service</a></li>
+                <li><a href="#contact" class="hover:text-accent-orange transition duration-300">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4 class="text-lg font-semibold mb-4 text-white">Get In Touch</h4>
+            <p class="text-footer-text text-sm mb-2">
+                123, Abacus Learning Hub, <br>Near City Park, New Delhi, India
+            </p>
+            <p class="text-footer-text text-sm mb-2">
+                Phone: +91 123 456 7890
+            </p>
+            <p class="text-footer-text text-sm">
+                Email: info@proskillabacus.com
+            </p>
+        </div>
+    </div>
+    <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500 text-sm">
+        © 2025 ProSkill Abacus Classes. All rights reserved.
+    </div>
+</footer>
+
+<script>
+    // Mobile Menu Toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mainNavLinks = document.querySelectorAll('#main-nav a'); // Get desktop links for scroll behavior
+    const mobileNavLinks = document.querySelectorAll('#mobile-menu a'); // Get mobile links for scroll behavior
+
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when a link is clicked
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+
+    // FAQ Accordion Toggle
+    function toggleAccordion(button) {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('i');
+
+        // Toggle visibility
+        content.classList.toggle('hidden');
+        // Toggle icon rotation
+        icon.classList.toggle('rotate-180');
+
+        // Optional: Smooth height transition (if you uncomment the CSS for max-height)
+        // if (!content.classList.contains('hidden')) {
+        //     content.style.maxHeight = content.scrollHeight + 'px';
+        // } else {
+        //     content.style.maxHeight = null;
+        // }
+    }
+
+    // Header Scroll Effect
+    const header = document.getElementById('header');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) { // Adjust scroll threshold as needed
+            header.classList.add('header-scrolled');
+        } else {
+            header.classList.remove('header-scrolled');
+        }
+    });
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProSkill Abacus Classes - Unleash Your Child's Potential</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Based on the image's warm/childish theme
+                        'primary-bg': '#FFFBF5', // Soft, warm cream background
+                        'accent-orange': '#FF8A00', // Bright, friendly orange
+                        'accent-brown': '#7B4A2F',  // Deeper, earthy brown for text/elements
+                        'secondary-yellow': '#FFD166', // Lighter, warm yellow
+                        'text-dark': '#3C3C3C', // Very dark gray/off-black for body text
+                        'text-light': '#6E6E6E', // Lighter gray for secondary text
+                        'btn-primary': '#E67E22', // A more vibrant, inviting orange for buttons
+                        'btn-secondary': '#F39C12', // A slightly different orange/yellow for secondary buttons
+                        'hero-gradient-start': '#F8C471', // Lighter yellow for gradient
+                        'hero-gradient-end': '#FF8A00',   // Deeper orange for gradient
+                        'footer-bg': '#2C3E50', // Dark but warm navy/charcoal for footer (contrasting but still soft)
+                        'footer-text': '#BDC3C7', // Light gray for footer text
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom styles can go here if Tailwind doesn't cover everything,
+           or for very specific overrides.
+           For example, for smooth scroll:
+        */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Sticky header background on scroll - needs JS */
+        .header-scrolled {
+            background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            backdrop-filter: blur(10px); /* Frosted glass effect */
+        }
+    </style>
+</head>
+<body class="font-sans text-text-dark bg-primary-bg antialiased">
+
+<header id="header" class="fixed top-0 left-0 w-full bg-primary-bg bg-opacity-90 z-50 transition-all duration-300">
+    <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+        <a href="#" class="flex items-center space-x-2">
+            <img src="https://via.placeholder.com/40x40?text=Logo" alt="ProSkill Abacus Logo" class="h-10 w-10 rounded-full bg-secondary-yellow">
+            <span class="text-2xl font-extrabold text-accent-brown">ProSkill</span>
+        </a>
+
+        <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-text-light focus:outline-none focus:text-text-dark">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <ul id="main-nav" class="hidden md:flex space-x-8 items-center">
+            <li><a href="#hero" class="text-lg font-medium text-text-light hover:text-accent-orange transition duration-300">Home</a></li>
+            <li><a href="#about" class="text-lg font-medium text-text-light hover:text-accent-orange transition duration-300">About Us</a></li>
+            <li><a href="#courses" class="text-lg font-medium text-text-light hover:text-accent-orange transition duration-300">Courses</a></li>
+            <li><a href="#testimonials" class="text-lg font-medium text-text-light hover:text-accent-orange transition duration-300">Testimonials</a></li>
+            <li><a href="#faq" class="text-lg font-medium text-text-light hover:text-accent-orange transition duration-300">FAQ</a></li>
+            <li><a href="#contact" class="text-lg font-medium text-text-light hover:text-accent-orange transition duration-300">Contact</a></li>
+            <li>
+                <a href="#" class="px-6 py-3 bg-btn-primary text-white rounded-full font-semibold hover:bg-accent-orange transition duration-300 shadow-md">
+                    Enroll Now
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-primary-bg py-4 shadow-lg">
+        <ul class="flex flex-col items-center space-y-4">
+            <li><a href="#hero" class="text-lg font-medium text-text-light hover:text-accent-orange transition duration-300 block py-2">Home</a></li>
+            <li><a href="#about" class="text-lg font-medium text-text-light hover:text-accent-orange transition duration-300 block py-2">About Us</a></li>
+            <li><a href="#courses" class="text-lg font-medium text-text-light hover:text-accent-orange transition duration-300 block py-2">Courses</a></li>
+            <li><a href="#testimonials" class="text-lg font-medium text-text-light hover:text-accent-orange transition duration-300 block py-2">Testimonials</a></li>
+            <li><a href="#faq" class="text-lg font-medium text-text-light hover:text-accent-orange transition duration-300 block py-2">FAQ</a></li>
+            <li><a href="#contact" class="text-lg font-medium text-text-light hover:text-accent-orange transition duration-300 block py-2">Contact</a></li>
+            <li>
+                <a href="#" class="px-6 py-3 bg-btn-primary text-white rounded-full font-semibold hover:bg-accent-orange transition duration-300 shadow-md block text-center">
+                    Enroll Now
+                </a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<main>
+    <section id="hero" class="relative bg-gradient-to-br from-hero-gradient-start to-hero-gradient-end text-text-dark py-24 md:py-32 overflow-hidden min-h-screen flex items-center justify-center">
+        <div class="absolute top-0 left-0 w-full h-full">
+            <div class="absolute w-64 h-64 bg-white bg-opacity-10 rounded-full -top-16 -left-16 animate-pulse"></div>
+            <div class="absolute w-96 h-96 bg-white bg-opacity-5 rounded-full bottom-20 -right-20 animate-pulse-slow"></div>
+        </div>
+
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+                Unlock Your Child's Potential with <span class="text-accent-brown">Abacus</span>
+            </h1>
+            <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-90 text-white">
+                Boost concentration, memory, and math skills with our engaging and effective abacus classes. Give your child the edge they deserve!
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#" class="px-8 py-4 bg-white text-btn-primary rounded-full font-bold text-lg hover:bg-gray-100 transition duration-300 shadow-lg">
+                    Book a Free Demo
+                </a>
+                <a href="#courses" class="px-8 py-4 border-2 border-white text-white rounded-full font-bold text-lg hover:bg-white hover:text-btn-primary transition duration-300 shadow-lg">
+                    Explore Courses
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 md:py-24 bg-primary-bg">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center text-accent-brown mb-12">
+                Why ProSkill Abacus?
+            </h2>
+            <div class="flex flex-col md:flex-row items-center md:space-x-12">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://via.placeholder.com/600x400?text=Happy+Kids+Learning" alt="Children learning abacus" class="rounded-lg shadow-xl transform hover:scale-105 transition duration-300">
+                </div>
+                <div class="md:w-1/2">
+                    <p class="text-lg leading-relaxed text-text-light mb-6">
+                        At ProSkill Abacus, we believe in nurturing young minds to achieve their full potential. Our certified instructors provide a supportive and stimulating environment where children master arithmetic skills while developing crucial cognitive abilities.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex items-start space-x-4 bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                            <i class="fas fa-brain text-3xl text-accent-orange mt-1"></i>
+                            <div>
+                                <h3 class="text-xl font-bold text-accent-brown mb-2">Enhanced Concentration</h3>
+                                <p class="text-text-light">Improve focus and attention span through engaging abacus exercises.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                            <i class="fas fa-memory text-3xl text-secondary-yellow mt-1"></i>
+                            <div>
+                                <h3 class="text-xl font-bold text-accent-brown mb-2">Boosted Memory Power</h3>
+                                <p class="text-text-light">Strengthen visual and auditory memory for better recall.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                            <i class="fas fa-calculator text-3xl text-accent-orange mt-1"></i>
+                            <div>
+                                <h3 class="text-xl font-bold text-accent-brown mb-2">Superior Math Skills</h3>
+                                <p class="text-text-light">Develop mental math prowess and a strong foundation in arithmetic.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                            <i class="fas fa-lightbulb text-3xl text-secondary-yellow mt-1"></i>
+                            <div>
+                                <h3 class="text-xl font-bold text-accent-brown mb-2">Overall Brain Development</h3>
+                                <p class="text-text-light">Stimulate both left and right brain hemispheres for holistic growth.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="py-16 md:py-24 bg-secondary-yellow bg-opacity-30">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center text-accent-brown mb-12">
+                Our Abacus Programs
+            </h2>
+            <p class="text-lg text-center text-text-light mb-12 max-w-3xl mx-auto">
+                We offer a structured curriculum designed to cater to different age groups and skill levels, ensuring a progressive learning journey for every child.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 group">
+                    <div class="p-8 pb-0">
+                        <div class="flex items-center justify-center bg-secondary-yellow text-accent-brown rounded-full w-16 h-16 mx-auto mb-6">
+                            <i class="fas fa-child text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-accent-brown text-center mb-3">Beginner Level</h3>
+                        <p class="text-text-light text-center mb-6">
+                            Introduction to abacus, basic addition and subtraction.
+                        </p>
+                    </div>
+                    <div class="bg-accent-orange text-white p-6 text-center">
+                        <ul class="text-sm space-y-2 mb-4 text-left">
+                            <li><i class="fas fa-check-circle text-white mr-2"></i>Ages: 5-7 years</li>
+                            <li><i class="fas fa-check-circle text-white mr-2"></i>Fundamentals of Abacus</li>
+                            <li><i class="fas fa-check-circle text-white mr-2"></i>Single Digit Operations</li>
+                        </ul>
+                        <a href="#" class="inline-block px-6 py-3 bg-white text-accent-orange rounded-full font-semibold hover:bg-gray-100 transition duration-300 shadow-md">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 group">
+                    <div class="p-8 pb-0">
+                        <div class="flex items-center justify-center bg-accent-orange bg-opacity-30 text-accent-brown rounded-full w-16 h-16 mx-auto mb-6">
+                            <i class="fas fa-graduation-cap text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-accent-brown text-center mb-3">Intermediate Level</h3>
+                        <p class="text-text-light text-center mb-6">
+                            Advanced addition, subtraction, introduction to multiplication.
+                        </p>
+                    </div>
+                    <div class="bg-accent-brown text-white p-6 text-center">
+                        <ul class="text-sm space-y-2 mb-4 text-left">
+                            <li><i class="fas fa-check-circle text-white mr-2"></i>Ages: 8-10 years</li>
+                            <li><i class="fas fa-check-circle text-white mr-2"></i>Multi-digit Operations</li>
+                            <li><i class="fas fa-check-circle text-white mr-2"></i>Mental Math Techniques</li>
+                        </ul>
+                        <a href="#" class="inline-block px-6 py-3 bg-white text-accent-brown rounded-full font-semibold hover:bg-gray-100 transition duration-300 shadow-md">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 group">
+                    <div class="p-8 pb-0">
+                        <div class="flex items-center justify-center bg-secondary-yellow text-accent-brown rounded-full w-16 h-16 mx-auto mb-6">
+                            <i class="fas fa-star text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-accent-brown text-center mb-3">Advanced Level</h3>
+                        <p class="text-text-light text-center mb-6">
+                            Complex calculations, division, decimals, speed accuracy.
+                        </p>
+                    </div>
+                    <div class="bg-accent-orange text-white p-6 text-center">
+                        <ul class="text-sm space-y-2 mb-4 text-left">
+                            <li><i class="fas fa-check-circle text-white mr-2"></i>Ages: 11+ years</li>
+                            <li><i class="fas fa-check-circle text-white mr-2"></i>Speed Calculation</li>
+                            <li><i class="fas fa-check-circle text-white mr-2"></i>Problem Solving Skills</li>
+                        </ul>
+                        <a href="#" class="inline-block px-6 py-3 bg-white text-accent-orange rounded-full font-semibold hover:bg-gray-100 transition duration-300 shadow-md">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="py-16 md:py-24 bg-primary-bg">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center text-accent-brown mb-12">
+                Our Simple Learning Path
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div class="flex flex-col items-center p-6 rounded-lg shadow-sm bg-white hover:shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-secondary-yellow text-accent-brown rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+                        1
+                    </div>
+                    <h3 class="text-xl font-bold text-accent-brown mb-3">Foundation Building</h3>
+                    <p class="text-text-light">Introduction to abacus tools and basic finger movements.</p>
+                </div>
+                <div class="flex flex-col items-center p-6 rounded-lg shadow-sm bg-white hover:shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-accent-orange text-accent-brown rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+                        2
+                    </div>
+                    <h3 class="text-xl font-bold text-accent-brown mb-3">Skill Development</h3>
+                    <p class="text-text-light">Mastering addition, subtraction, multiplication, and division.</p>
+                </div>
+                <div class="flex flex-col items-center p-6 rounded-lg shadow-sm bg-white hover:shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-secondary-yellow text-accent-brown rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+                        3
+                    </div>
+                    <h3 class="text-xl font-bold text-accent-brown mb-3">Speed & Accuracy</h3>
+                    <p class="text-text-light">Developing mental calculation techniques for rapid problem-solving.</p>
+                </div>
+                <div class="flex flex-col items-center p-6 rounded-lg shadow-sm bg-white hover:shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-accent-orange text-accent-brown rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+                        4
+                    </div>
+                    <h3 class="text-xl font-bold text-accent-brown mb-3">Application & Mastery</h3>
+                    <p class="text-text-light">Applying skills to real-world problems and competitive scenarios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-16 md:py-24 bg-accent-brown text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full">
+            <div class="absolute w-64 h-64 bg-white bg-opacity-10 rounded-full -top-16 -left-16 transform rotate-45"></div>
+            <div class="absolute w-96 h-96 bg-white bg-opacity-5 rounded-full bottom-20 -right-20 transform -rotate-15"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12">
+                What Our Parents Say
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white text-text-dark p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/60x60?text=Parent1" alt="Parent Photo" class="w-16 h-16 rounded-full mr-4 object-cover">
+                        <div>
+                            <p class="font-bold text-lg">Mrs. Priya Sharma</p>
+                            <p class="text-sm text-text-light">Parent of Aarav (8)</p>
+                        </div>
+                    </div>
+                    <div class="flex text-accent-orange mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="italic text-text-dark leading-relaxed">
+                        "ProSkill Abacus has been a game-changer for my son! His mental math skills have dramatically improved, and he's so much more confident in school."
+                    </p>
+                </div>
+
+                <div class="bg-white text-text-dark p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/60x60?text=Parent2" alt="Parent Photo" class="w-16 h-16 rounded-full mr-4 object-cover">
+                        <div>
+                            <p class="font-bold text-lg">Mr. Rahul Singh</p>
+                            <p class="text-sm text-text-light">Parent of Diya (7)</p>
+                        </div>
+                    </div>
+                    <div class="flex text-accent-orange mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic text-text-dark leading-relaxed">
+                        "The instructors are amazing – patient and highly skilled. My daughter loves her classes and her concentration has improved significantly."
+                    </p>
+                </div>
+
+                <div class="bg-white text-text-dark p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/60x60?text=Parent3" alt="Parent Photo" class="w-16 h-16 rounded-full mr-4 object-cover">
+                        <div>
+                            <p class="font-bold text-lg">Dr. Smita Rao</p>
+                            <p class="text-sm text-text-light">Parent of Rohan (9)</p>
+                        </div>
+                    </div>
+                    <div class="flex text-accent-orange mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="italic text-text-dark leading-relaxed">
+                        "Excellent program! Rohan not only excels in math now but also shows great enthusiasm for learning. Highly recommend ProSkill Abacus."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-16 md:py-24 bg-secondary-yellow bg-opacity-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center text-accent-brown mb-12">
+                Frequently Asked Questions
+            </h2>
+
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="w-full text-left p-6 font-semibold text-lg text-accent-brown flex justify-between items-center focus:outline-none" onclick="toggleAccordion(this)">
+                        What is Abacus education?
+                        <i class="fas fa-chevron-down text-text-light transition-transform duration-300"></i>
+                    </button>
+                    <div class="p-6 pt-0 text-text-light hidden">
+                        <p>Abacus education is a mental arithmetic system that teaches children to perform calculations (addition, subtraction, multiplication, division, etc.) using a physical abacus initially, and then mentally by visualizing the abacus.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="w-full text-left p-6 font-semibold text-lg text-accent-brown flex justify-between items-center focus:outline-none" onclick="toggleAccordion(this)">
+                        What are the benefits for my child?
+                        <i class="fas fa-chevron-down text-text-light transition-transform duration-300"></i>
+                    </button>
+                    <div class="p-6 pt-0 text-text-light hidden">
+                        <p>Benefits include improved concentration, enhanced memory, stronger mental calculation abilities, better problem-solving skills, and overall brain development, leading to academic excellence.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="w-full text-left p-6 font-semibold text-lg text-accent-brown flex justify-between items-center focus:outline-none" onclick="toggleAccordion(this)">
+                        What is the ideal age to start Abacus classes?
+                        <i class="fas fa-chevron-down text-text-light transition-transform duration-300"></i>
+                    </button>
+                    <div class="p-6 pt-0 text-text-light hidden">
+                        <p>The ideal age to start Abacus classes is typically between 5 to 14 years, as children's brains are highly receptive to new learning during this period.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="w-full text-left p-6 font-semibold text-lg text-accent-brown flex justify-between items-center focus:outline-none" onclick="toggleAccordion(this)">
+                        Do you offer online classes?
+                        <i class="fas fa-chevron-down text-text-light transition-transform duration-300"></i>
+                    </button>
+                    <div class="p-6 pt-0 text-text-light hidden">
+                        <p>Yes, we offer both in-person and highly interactive online abacus classes with live instructors and dedicated support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-20 bg-gradient-to-r from-btn-primary to-accent-orange text-white text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-6">Ready to Give Your Child the Abacus Advantage?</h2>
+            <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-90">
+                Join our growing family of successful students. Enroll today and watch your child excel!
+            </p>
+            <a href="#contact" class="px-8 py-4 bg-white text-btn-primary rounded-full font-bold text-lg hover:bg-gray-100 transition duration-300 shadow-lg">
+                Get Started Now
+            </a>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-24 bg-primary-bg">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center text-accent-brown mb-12">
+                Get In Touch
+            </h2>
+
+            <div class="flex flex-col md:flex-row gap-12 max-w-5xl mx-auto">
+                <div class="md:w-1/2 bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold text-accent-brown mb-6">Send Us a Message</h3>
+                    <form action="#" method="POST" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-text-dark text-sm font-bold mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-3 px-4 text-text-dark leading-tight focus:outline-none focus:ring-2 focus:ring-accent-orange transition duration-200" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-text-dark text-sm font-bold mb-2">Your Email</label>
+                            <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-3 px-4 text-text-dark leading-tight focus:outline-none focus:ring-2 focus:ring-accent-orange transition duration-200" placeholder="john.doe@example.com">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-text-dark text-sm font-bold mb-2">Phone Number (Optional)</label>
+                            <input type="tel" id="phone" name="phone" class="shadow appearance-none border rounded w-full py-3 px-4 text-text-dark leading-tight focus:outline-none focus:ring-2 focus:ring-accent-orange transition duration-200" placeholder="+91 9876543210">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-text-dark text-sm font-bold mb-2">Your Message</label>
+                            <textarea id="message" name="message" rows="5" class="shadow appearance-none border rounded w-full py-3 px-4 text-text-dark leading-tight focus:outline-none focus:ring-2 focus:ring-accent-orange transition duration-200" placeholder="Tell us about your child and what you're looking for..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-btn-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-accent-orange transition duration-300 shadow-md">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <div class="md:w-1/2 space-y-8">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold text-accent-brown mb-6">Our Location & Details</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-map-marker-alt text-xl text-accent-orange mt-1"></i>
+                                <div>
+                                    <p class="font-semibold text-text-dark">Address:</p>
+                                    <p class="text-text-light">123, Abacus Learning Hub, Near City Park, New Delhi, India</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-phone-alt text-xl text-accent-orange"></i>
+                                <div>
+                                    <p class="font-semibold text-text-dark">Phone:</p>
+                                    <p class="text-text-light">+91 123 456 7890</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-envelope text-xl text-accent-orange"></i>
+                                <div>
+                                    <p class="font-semibold text-text-dark">Email:</p>
+                                    <p class="text-text-light">info@proskillabacus.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="font-semibold text-lg text-accent-brown mb-3">Follow Us:</h4>
+                            <div class="flex space-x-4 text-2xl">
+                                <a href="#" class="text-accent-orange hover:text-accent-brown transition duration-300"><i class="fab fa-facebook"></i></a>
+                                <a href="#" class="text-accent-orange hover:text-accent-brown transition duration-300"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="text-accent-orange hover:text-accent-brown transition duration-300"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="text-accent-orange hover:text-accent-brown transition duration-300"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg shadow-lg overflow-hidden">
+                        <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.5855734261763!2d77.21666491490234!3d28.61391648242491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd1b8c0e2511%3A0x8f7d9c6e5a4e3e3b!2sConnaught%20Place%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1678901234567!5m2!1sen!2sin"
+                                width="100%"
+                                height="300"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                class="rounded-lg"
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="bg-footer-bg text-footer-text py-12">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+            <a href="#" class="flex items-center space-x-2 mb-4">
+                <img src="https://via.placeholder.com/30x30?text=Logo" alt="ProSkill Abacus Logo" class="h-8 w-8 rounded-full bg-secondary-yellow">
+                <span class="text-xl font-extrabold text-white">ProSkill</span>
+            </a>
+            <p class="text-footer-text text-sm leading-relaxed">
+                Nurturing young minds for a brighter future through engaging Abacus education.
+            </p>
+            <div class="flex space-x-4 mt-4 text-xl">
+                <a href="#" class="text-footer-text hover:text-accent-orange transition duration-300"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-footer-text hover:text-accent-orange transition duration-300"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-footer-text hover:text-accent-orange transition duration-300"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-footer-text hover:text-accent-orange transition duration-300"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div>
+            <h4 class="text-lg font-semibold mb-4 text-white">Quick Links</h4>
+            <ul class="space-y-2 text-footer-text text-sm">
+                <li><a href="#about" class="hover:text-accent-orange transition duration-300">About Us</a></li>
+                <li><a href="#courses" class="hover:text-accent-orange transition duration-300">Our Courses</a></li>
+                <li><a href="#how-it-works" class="hover:text-accent-orange transition duration-300">How It Works</a></li>
+                <li><a href="#testimonials" class="hover:text-accent-orange transition duration-300">Testimonials</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4 class="text-lg font-semibold mb-4 text-white">Support</h4>
+            <ul class="space-y-2 text-footer-text text-sm">
+                <li><a href="#faq" class="hover:text-accent-orange transition duration-300">FAQ</a></li>
+                <li><a href="#" class="hover:text-accent-orange transition duration-300">Privacy Policy</a></li>
+                <li><a href="#" class="hover:text-accent-orange transition duration-300">Terms of Service</a></li>
+                <li><a href="#contact" class="hover:text-accent-orange transition duration-300">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4 class="text-lg font-semibold mb-4 text-white">Get In Touch</h4>
+            <p class="text-footer-text text-sm mb-2">
+                123, Abacus Learning Hub, <br>Near City Park, New Delhi, India
+            </p>
+            <p class="text-footer-text text-sm mb-2">
+                Phone: +91 123 456 7890
+            </p>
+            <p class="text-footer-text text-sm">
+                Email: info@proskillabacus.com
+            </p>
+        </div>
+    </div>
+    <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500 text-sm">
+        © 2025 ProSkill Abacus Classes. All rights reserved.
+    </div>
+</footer>
+
+<script>
+    // Mobile Menu Toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mainNavLinks = document.querySelectorAll('#main-nav a'); // Get desktop links for scroll behavior
+    const mobileNavLinks = document.querySelectorAll('#mobile-menu a'); // Get mobile links for scroll behavior
+
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when a link is clicked
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+
+    // FAQ Accordion Toggle
+    function toggleAccordion(button) {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('i');
+
+        // Toggle visibility
+        content.classList.toggle('hidden');
+        // Toggle icon rotation
+        icon.classList.toggle('rotate-180');
+
+        // Optional: Smooth height transition (if you uncomment the CSS for max-height)
+        // if (!content.classList.contains('hidden')) {
+        //     content.style.maxHeight = content.scrollHeight + 'px';
+        // } else {
+        //     content.style.maxHeight = null;
+        // }
+    }
+
+    // Header Scroll Effect
+    const header = document.getElementById('header');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) { // Adjust scroll threshold as needed
+            header.classList.add('header-scrolled');
+        } else {
+            header.classList.remove('header-scrolled');
+        }
+    });
+</script>
+
+</body>
+</html>
