@@ -1,0 +1,54 @@
+body {
+    background-color: #ffeb99; /* Light background color for a fresh look */
+    font-family: 'Comic Sans MS', sans-serif; /* Child-friendly font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.results {
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff; /* White background for the results container */
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #2c3e50; /* Dark blue color for the title */
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #3498db; /* Blue color for the score */
+}
+
+p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+#piechart {
+    width: 100%; /* Responsive pie chart */
+    height: 300px; /* Set height for pie chart */
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff8c42; /* Orange button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e57c30; /* Darker orange on hover */
+}
